@@ -218,8 +218,8 @@ public class Server extends UnicastRemoteObject implements IServer {
 		System.out.println("Conexion establecida por:");
 		System.out.println("IP=" + miIP + ", y puerto=" + puerto);
 
-		reg = LocateRegistry.createRegistry(puerto);
-		reg.rebind("WorldConqStubServer", this);
+		reg = LocateRegistry.createRegistry(1099);
+		reg.rebind("Server", this);
 
 		System.out.println("Esperando peticiones...");
 	}
